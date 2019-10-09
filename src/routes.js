@@ -8,10 +8,28 @@ import ColorThemes from './assets/vue/pages/color-themes.vue';
 import Chat from './assets/vue/pages/chat.vue';
 import Vuex from './assets/vue/pages/vuex.vue';
 
+// Componentes
+import Inicio from './assets/vue/pages/inicio.vue'
+import IniciarSesion from './assets/vue/pages/iniciar-sesion.vue'
+import RegistrarUsuario from './assets/vue/pages/registrar-usuario.vue'
+
+// Guardian Principal -> verifica autenticacion de usuarios
+const autenticado = () => {
+
+}
+
 export default [
   {
     path: '/',
-    component: Home
+    component: IniciarSesion
+  },
+  {
+    path: '/inicio/',
+    component: Inicio
+  },
+  {
+    path: '/registrar-usuario/',
+    component: RegistrarUsuario
   },
   {
     path: '/about/',
