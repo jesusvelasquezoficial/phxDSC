@@ -12,16 +12,24 @@ import Vuex from './assets/vue/pages/vuex.vue';
 import Inicio from './assets/vue/pages/inicio.vue'
 import IniciarSesion from './assets/vue/pages/iniciar-sesion.vue'
 import RegistrarUsuario from './assets/vue/pages/registrar-usuario.vue'
+import RegistroExitoso from './assets/vue/pages/registro-exitoso.vue'
+import MenuIzquierdo from './assets/vue/pages/menu-izquierdo.vue'
+import MenuDiestro from './assets/vue/pages/menu-diestro.vue'
+import AgregarProducto from './assets/vue/pages/agregar-producto.vue'
+import MostrarProducto from './assets/vue/pages/mostrar-producto.vue'
 
-// Guardian Principal -> verifica autenticacion de usuarios
-const autenticado = () => {
-
-}
+import Auth from './assets/auth'
 
 export default [
   {
     path: '/',
-    component: IniciarSesion
+    async: (routeTo, routeFrom, resolve, reject) => { 
+      if(Auth.user.authenticated){
+        resolve({component: Inicio})  
+      }else{
+        resolve({component: IniciarSesion})
+      } 
+    }
   },
   {
     path: '/inicio/',
@@ -32,8 +40,25 @@ export default [
     component: RegistrarUsuario
   },
   {
-    path: '/about/',
-    component: AboutPage
+    path: '/registro-exitoso/',
+    component: RegistroExitoso
+  },
+  {
+    path: '/menu-izquierdo/',
+    component: MenuIzquierdo
+  },
+  {
+    path: '/menu-diestro/',
+    component: MenuDiestro
+  },
+  {
+    path: '/agregar-producto/',
+    component: AgregarProducto
+  },
+  {
+    path: '/mostrar-producto/:id',
+    component: MostrarProducto,
+    props: true
   },
   {
     path: '/form/',
@@ -43,10 +68,10 @@ export default [
     path: '/dynamic-route/blog/:blogId/post/:postId/',
     component: DynamicRoutePage
   },
-  {
-    path: '/panel-left/',
-    component: PanelLeftPage
-  },
+  // {
+  //   path: '/panel-left/',
+  //   component: PanelLeftPage
+  // },
   {
     path: '/color-themes/',
     component: ColorThemes

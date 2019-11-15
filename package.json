@@ -18,6 +18,7 @@
     "cheerio": "^1.0.0-rc.3",
     "chokidar": "^3.1.1",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.4",
     "cordova-plugin-whitelist": "^1.3.4",
     "css-loader": "^3.2.0",
     "current-device": "^0.8.2",
@@ -26,6 +27,7 @@
     "file-loader": "^4.2.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "path": "^0.12.7",
     "sass-loader": "^8.0.0",
@@ -45,6 +47,8 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.1",
+    "axios": "^0.19.0",
+    "chart.js": "^2.8.0",
     "cordova-android": "^8.1.0",
     "cordova-browser": "^6.0.0",
     "fastclick": "^1.0.6",
@@ -54,6 +58,8 @@
     "loglevel": "^1.6.4",
     "material-design-icons": "^3.0.1",
     "vue": "^2.6.10",
+    "vue-axios": "^2.1.5",
+    "vue-chartjs": "^3.4.2",
     "vuex": "^3.1.1"
   },
   "displayName": "PhxDCS",
@@ -62,8 +68,8 @@
       "cordova-plugin-whitelist": {}
     },
     "platforms": [
-      "browser",
-      "android"
+      "android",
+      "browser"
     ]
   }
 }

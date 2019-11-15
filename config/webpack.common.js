@@ -2,6 +2,7 @@ const path = require('path');
 
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const entryFile = path.join(__dirname + '/../src/main.js');
@@ -109,6 +110,13 @@ module.exports = function (options) {
           minifyCSS: true
         }
       }),
+      new CopyWebpackPlugin([
+        { from: 'src/main.js', to: '../../pdsc_server/assets/dist' },
+        { from: 'src/main.vue', to: '../../pdsc_server/assets/dist' },
+        { from: 'src/routes.js', to: '../../pdsc_server/assets/dist' },
+        { from: 'src/index.ejs', to: '../../pdsc_server/assets/dist' },
+        { from: 'src/assets', to: '../../pdsc_server/assets/dist/assets' }
+      ]),
       new VueLoaderPlugin()
     ]
   }

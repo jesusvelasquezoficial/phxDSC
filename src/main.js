@@ -1,6 +1,11 @@
 // Import Vue
 import Vue from 'vue';
 
+// Import Axios (Json)
+import Axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, Axios)
+
 // Import Framework7
 import Framework7 from 'framework7/framework7.esm.bundle';
 
