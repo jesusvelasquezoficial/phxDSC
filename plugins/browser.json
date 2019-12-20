@@ -8,7 +8,7 @@
   },
   "installed_plugins": {
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.pdsc"
+      "PACKAGE_NAME": "net.phoenixplus.pdsc"
     }
   },
   "dependent_plugins": {}
