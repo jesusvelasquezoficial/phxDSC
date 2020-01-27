@@ -36,7 +36,7 @@ import app from './main.vue';
 // Import Vuex Storage
 import store from './assets/vuex/storage.js';
 
-import BootstrapVue from  'bootstrap-vue'
+import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap-grid.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue)
