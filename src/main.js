@@ -2,9 +2,9 @@
 import Vue from 'vue';
 
 // Import Axios (Json)
-import Axios from 'axios'
-import VueAxios from 'vue-axios'
-Vue.use(VueAxios, Axios)
+import Axios from 'axios';
+import VueAxios from 'vue-axios';
+Vue.use(VueAxios, Axios);
 
 // Import Framework7
 import Framework7 from 'framework7/framework7.esm.bundle';
@@ -36,10 +36,10 @@ import app from './main.vue';
 // Import Vuex Storage
 import store from './assets/vuex/storage.js';
 
-import BootstrapVue from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap-grid.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-Vue.use(BootstrapVue)
+import BootstrapVue from 'bootstrap-vue';
+import 'bootstrap/dist/css/bootstrap-grid.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
+Vue.use(BootstrapVue);
 
 // Different F7-Vue plugin initialization with f7 v3.0
 Framework7.use(Framework7Vue);
