@@ -118,13 +118,14 @@
 } */
 
 
-.swiper-container{
+.swiper-container {
   height: auto !important;
 }
-.swiper-container-android .swiper-slide, .swiper-wrapper{
+.swiper-container-android .swiper-slide,
+.swiper-wrapper {
   height: auto !important;
 }
-.swiper-wrapper{
+.swiper-wrapper {
   height: auto !important;
 }
 
