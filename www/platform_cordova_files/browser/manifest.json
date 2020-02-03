@@ -1,0 +1,17 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Phoenix+",
+  "short_name": "Phoenix+",
+  "version": "net.phoenixplus.pdsc",
+  "description": "Phoenix Science Data Center",
+  "author": "Jesus Velasquez",
+  "icons": [
+    {
+      "src": "www/images/icono.jpeg",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    }
+  ],
+  "start_url": "index.html"
+}

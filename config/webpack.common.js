@@ -17,10 +17,11 @@ module.exports = function (options) {
       modules: [path.join(__dirname, '../src'), 'node_modules'],
       alias: {
         'vue$': 'vue/dist/vue.common.js',
+        "@": path.resolve(__dirname, "../src/"),
         'src': path.resolve(__dirname, '../src/'),
         'assets': path.resolve(__dirname, '../src/assets/'),
         'pages': path.resolve(__dirname, '../src/assets/vue/pages/'),
-        'components': path.resolve(__dirname, '../src/assets/vue/components/')
+        'Components': path.resolve(__dirname, '../src/components/')
       }
     },
 
