@@ -14,14 +14,18 @@ module.exports = function (options) {
 
     resolve: {
       extensions: ['.js', '.json', '.vue'],
-      modules: [path.join(__dirname, '../src'), 'node_modules'],
+      modules: [path.join(__dirname, '../src/'), 'node_modules'],
       alias: {
         'vue$': 'vue/dist/vue.common.js',
         "@": path.resolve(__dirname, "../src/"),
-        'src': path.resolve(__dirname, '../src/'),
-        'assets': path.resolve(__dirname, '../src/assets/'),
-        'pages': path.resolve(__dirname, '../src/assets/vue/pages/'),
-        'Components': path.resolve(__dirname, '../src/components/')
+        'Components': path.resolve(__dirname, '../src/components/'),
+        'Constants': path.resolve(__dirname, '../src/constants/'),
+        'Container': path.resolve(__dirname, '../src/container/'),
+        'Helpers': path.resolve(__dirname, '../src/helpers/'),
+        'Assets': path.resolve(__dirname, '../src/assets/'),
+        'Themes': path.resolve(__dirname, '../src/themes/'),
+        'Pages': path.resolve(__dirname, '../src/pages/'),
+        'Lib': path.resolve(__dirname, '../src/lib/'),
       }
     },
 
@@ -78,7 +82,7 @@ module.exports = function (options) {
         },
         {
           test: /\.js$/,
-          exclude: /node_modules(\/|\\)(?!(framework7|framework7-vue|template7|dom7)(\/|\\)).*/,
+          exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
             options: {
@@ -96,6 +100,12 @@ module.exports = function (options) {
           'NODE_ENV': JSON.stringify(options.mode)
         }
       }),
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jquery: "jquery",
+        "window.jQuery": "jquery",
+        jQuery: "jquery"
+      }),
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: 'src/index.ejs',
@@ -112,11 +122,7 @@ module.exports = function (options) {
         }
       }),
       new CopyWebpackPlugin([
-        { from: 'src/main.js', to: '../../pdsc_server/assets/dist' },
-        { from: 'src/main.vue', to: '../../pdsc_server/assets/dist' },
-        { from: 'src/routes.js', to: '../../pdsc_server/assets/dist' },
-        { from: 'src/index.ejs', to: '../../pdsc_server/assets/dist' },
-        { from: 'src/assets', to: '../../pdsc_server/assets/dist/assets' }
+        { from: 'src', to: '../../pdsc_server/assets/src' },
       ]),
       new VueLoaderPlugin()
     ]

@@ -11,10 +11,8 @@ module.exports = function (ctx) {
 
         nodeModulesPath = path.resolve(pRoot, 'node_modules/'),
         wwwFolder = path.resolve(pRoot, 'www/'),
-        staticFolder = path.resolve(pRoot, 'src/assets/images'),
-        targetStaticFolder = path.resolve(wwwFolder, 'images/'),
-        // staticFolder = path.resolve(pRoot, 'src/static/'),
-        // targetStaticFolder = path.resolve(wwwFolder, 'static/'),
+        staticFolder = path.resolve(pRoot, 'src/static'),
+        targetStaticFolder = path.resolve(wwwFolder, 'static/'),
         manifestFileSrcPath = path.resolve(pRoot, 'src/manifest.json'),
         manifestFileCopyPath = path.resolve(wwwFolder, 'manifest.json'),
         webpackPath = path.resolve(nodeModulesPath, '.bin/webpack'),

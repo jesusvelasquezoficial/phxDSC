@@ -8,7 +8,7 @@
   "author": "Jesus Velasquez",
   "icons": [
     {
-      "src": "www/images/icono.jpeg",
+      "src": "www/static/img/icono.jpeg",
       "type": "image/png",
       "sizes": "undefinedxundefined"
     }
