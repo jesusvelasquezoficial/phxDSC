@@ -126,5 +126,5 @@ module.exports = function (options) {
       ]),
       new VueLoaderPlugin()
     ]
-  }
-}
+  };
+};
