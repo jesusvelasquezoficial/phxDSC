@@ -3,14 +3,19 @@
 		<page-title-bar></page-title-bar>
 		<crypto-slider></crypto-slider>
 		<b-row>
-			<b-col sm="12" md='8' class="p-0">
+			<b-col sm="12" md='9' style="padding:0rem .5rem;">
 				<indicadores-tasas></indicadores-tasas>
 			</b-col>
-			<b-col sm="12" md='4' class="p-0">
+			<b-col sm="12" md='3' class="p-0">
 				<calendario></calendario>
 			</b-col>
 		</b-row>
-		<graph-mercado-oficial></graph-mercado-oficial>
+		<!-- <b-row>
+			<b-col sm="12" class="mb-4">
+				<graph-general></graph-general>
+			</b-col>
+		</b-row> -->
+		<graph-mercados></graph-mercados>
 		<tablas-mercados></tablas-mercados>
 	</div>
 </template>
@@ -24,12 +29,21 @@ import { mapActions } from 'vuex';
 			}
 		},
 		methods: {
-			...mapActions('tasas', ['loadDataPetroleo','loadDataOficial','loadDataParalelo'])
+			...mapActions('tasas', [
+				'loadDataOficial',
+				'loadDataParalelo',
+				'loadDataPetroleo',
+				'loadDataOro',
+				'loadDataPetro',
+				'loadDataBitcoin'])
 		},
 		created() {
-			this.loadDataPetroleo();
 			this.loadDataOficial();
     	this.loadDataParalelo();
+			this.loadDataPetroleo();
+    	this.loadDataOro();
+    	this.loadDataPetro();
+    	this.loadDataBitcoin();
 		},
 	};
 </script>
