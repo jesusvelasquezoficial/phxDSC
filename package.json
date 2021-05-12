@@ -19,7 +19,7 @@
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.4.0",
     "britecharts": "^2.13.2",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "chartjs-plugin-crosshair": "^1.1.4",
     "chartjs-plugin-datalabels": "^0.7.0",
     "chartjs-plugin-zoom": "^0.7.5",
